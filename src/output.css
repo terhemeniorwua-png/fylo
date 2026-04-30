@@ -171,8 +171,33 @@
   .contents {
     display: contents;
   }
+  .flex {
+    display: flex;
+  }
   .table {
     display: table;
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-52 {
+    width: calc(var(--spacing) * 52);
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .space-y-10 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -183,21 +208,34 @@
 :root {
   --font-Raleway: var(--font-Raleway);
 }
-@media screen and (min-width:10em) {
-  body {
-    background-image: url(../images/bg-mobile.png);
-    background-position: top;
-    background-size: cover;
-    color: white;
-  }
-}
 @media screen and (min-width:30em) {
   body {
     background-image: url(../images/bg-desktop.png);
     background-position: top;
-    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
+    padding-left: 10%;
+    padding-right: 10%;
   }
+}
+.bgpadding {
+  background-color: hsl(229, 57%, 11%);
+  padding: 1.2em;
+  border-radius: 1em;
+}
+.folderMobile {
+  margin: auto;
+  background-color: hsl(228, 56%, 26%);
+  align-items: center;
+  padding: 10%;
+  border-radius: 1.2em;
+  border-top-right-radius: 5em;
+  margin-top: 10%;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-outline-style {
   syntax: "*";
@@ -207,6 +245,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
       --tw-outline-style: solid;
     }
   }
