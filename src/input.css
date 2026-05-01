@@ -35,6 +35,7 @@
         /* background-position-y: 250%; */
         background-repeat: no-repeat;
         color: white;
+        padding-right: 10%;
     }
     .folderMobile{
     
@@ -53,4 +54,27 @@
     padding: 1.2em;
     /* padding-right: 5%; */
     border-radius: 1em;
+}
+.space{
+    height: 0.5em;
+    background:linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%), 60%, hsl(229, 57%, 11%));
+    border-radius: 1em;
+}
+.rightcard{
+       background-color: hsl(228, 56%, 26%);
+       padding: 5%;
+       padding-left: 7%;
+       padding-right: 7%;
+       line-height: 3em;
+       border-radius: 0.8em;
+}
+a{
+    color: rgb(235, 148, 98);
+}
+a:hover{
+    text-decoration: underline;
+    color:brown;
+}
+a:visited{
+    color:coral;
 }
